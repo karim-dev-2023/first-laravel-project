@@ -14,9 +14,10 @@ class Article extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($titre = "IA",$description= "RAS")
     {
-        //
+        $this->titre = $titre;
+        $this->description = $description;
     }
 
     /**
