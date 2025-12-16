@@ -1,6 +1,6 @@
 <!-- resources/views/layouts/app.blade.php -->
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="UTF-8">
@@ -8,15 +8,11 @@
 </head>
 
 <body>
-    <header>
-        <h1>Mon site Laravel</h1>
-    </header>
+    @include('partial.header')
     <main>
         @yield('content')
     </main>
-    <footer>
-        <p>© 2025 - Tous droits réservés</p>
-    </footer>
+    @include('partial.footer')
 </body>
 
 </html>
