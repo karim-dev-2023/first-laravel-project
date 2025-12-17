@@ -1,5 +1,4 @@
 <div>
     <h3> {{$titre}} </h3>
-    <p> {{Str::limit($description,30)}} </p>
-    {{$slot}}
+    <p> {{Str::limit($description,30)}} </p> 
 </div>

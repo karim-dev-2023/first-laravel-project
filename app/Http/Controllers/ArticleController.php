@@ -30,39 +30,23 @@ class ArticleController extends Controller
             'description' => 'Plus de liberté, mais aussi plus de solitude.',
         ]);
 
-        // Méthode avec instanciation
-        // $item = new Articles();
-        // $item->title = 'Salon du Web';
-        // $item->description = 'Événement annuel sur les technologies du web';
-        // $item->date = '2025-12-05';
-        // $item->save();
-
         return "Ajout éffectué";
     }
 
     public function updateItem($id)
     {
-        // // Mise à jour via l'objet
-        // $item = Articles::find(1);
-        // $item->title = 'Conférence Laravel 2025';
-        // $item->save();
-
+   
         // Ou avec la méthode update()
         Articles::where('id', $id)->update(['title' => 'Salon du Web 2025']);
-        return "Mis à jour efefctuer";
+        
+        return "Mis à jour éffectué";
     }
 
     public function deleteItem($id)
     {
-        // Supprimer un enregistrement spécifique
-        // $item = Articles::find(1);
-        // $item->delete();
 
         // Supprimer directement par ID
         Articles::destroy(2);
-
-        // Supprimer plusieurs lignes à la fois
-        // Articles::where('date', '<', now())->delete();
 
         return "Suppression éffectué";
     }
