@@ -8,7 +8,7 @@
             @break
         @endif
         <a href="{{ route('article.details', $article->id) }}" title="Voir l'article">
-            <x-article :titre="$article->titre" :description="$article->description"/>
+            <x-article :titre="$article->title" :description="$article->description"/>
         </a>
     @endforeach
 

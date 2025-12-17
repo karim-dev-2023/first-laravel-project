@@ -22,15 +22,15 @@ class ArticleController extends Controller
     {
         // Méthode rapide avec create()
         Articles::create([
-            'titre' => 'L’IA soigne mieux',
+            'title' => 'L’IA soigne mieux',
             'description' => 'L’intelligence artificielle aide les médecins à diagnostiquer plus vite.',
         ]);
         Articles::create([
-            'titre' => 'Villes vertes',
+            'title' => 'Villes vertes',
             'description' => 'Les métropoles deviennent plus écologiques et durables',
         ]);
         Articles::create([
-            'titre' => 'Télétravail',
+            'title' => 'Télétravail',
             'description' => 'Plus de liberté, mais aussi plus de solitude.',
         ]);
 
