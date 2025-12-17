@@ -11,6 +11,10 @@ class ArticleController extends Controller
     {
         // Récupérer un enregistrement par son identifiant
         $item = Articles::find($id);
+
+        if (!$item) {
+            return "Article non trouvé";
+        }
         return view('pages.article-details', ["article" => $item]);
     }
 
@@ -35,19 +39,26 @@ class ArticleController extends Controller
 
     public function updateItem($id)
     {
-   
-        // Ou avec la méthode update()
-        Articles::where('id', $id)->update(['title' => 'Salon du Web 2025']);
-        
-        return "Mis à jour éffectué";
+        $article = Articles::findOrFail($id);
+
+        $article->update([
+            'title' => 'Salon du Web 2025'
+        ]);
+
+        return 'Mise à jour effectuée';
     }
+
 
     public function deleteItem($id)
     {
+        $article = Articles::find($id);
 
-        // Supprimer directement par ID
-        Articles::destroy(2);
+        if (!$article) {
+            return ('Article non trouvé');
+        }
 
-        return "Suppression éffectué";
+        $article->delete();
+
+        return ('Suppression effectuée');
     }
 }
