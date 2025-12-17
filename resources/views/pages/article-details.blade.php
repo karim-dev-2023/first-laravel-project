@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('title', 'Article - ' . $id)
+@section('title', 'Article - ' . $article->titre)
 @section('content')
 
-<h2> Article portant l’identifiant {{$id}} </h2>
+    <h2> <x-article :titre="$article->titre" :description="$article->description" /> </h2>
 @endsection
