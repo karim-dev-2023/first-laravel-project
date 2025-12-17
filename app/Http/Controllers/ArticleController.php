@@ -37,6 +37,7 @@ class ArticleController extends Controller
         // $item->date = '2025-12-05';
         // $item->save();
 
+        return "Ajout éffectué";
     }
 
     public function updateItem($id)
@@ -48,6 +49,7 @@ class ArticleController extends Controller
 
         // Ou avec la méthode update()
         Articles::where('id', $id)->update(['title' => 'Salon du Web 2025']);
+        return "Mis à jour efefctuer";
     }
 
     public function deleteItem($id)
@@ -61,5 +63,7 @@ class ArticleController extends Controller
 
         // Supprimer plusieurs lignes à la fois
         // Articles::where('date', '<', now())->delete();
+
+        return "Suppression éffectué";
     }
 }

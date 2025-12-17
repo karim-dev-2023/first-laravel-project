@@ -7,8 +7,8 @@
         @if ($loop->last)
             @break
         @endif
-        <a href="{{ route('article.details', $article['id']) }}" title="Voir l'article">
-            <x-article :titre="$article['titre']" :description="$article['description']">
+        <a href="{{ route('article.details', $article->id) }}" title="Voir l'article">
+            <x-article :titre="$article->titre" :description="$article->description">
 
             </x-article>
         </a>
